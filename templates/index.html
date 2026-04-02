@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Подсчёт гостей в кафе</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>🍽️ Подсчёт количества гостей за столами в кафе</h1>
+        <div class="upload-section">
+            <h2>Загрузка файла</h2>
+            <input type="file" id="fileInput" accept="image/*,video/*">
+            <button id="uploadBtn">Обработать</button>
+        </div>
+        <div class="camera-section">
+            <h2>Веб-камера</h2>
+            <video id="video" autoplay playsinline></video>
+            <button id="snapshotBtn">Сделать снимок и обработать</button>
+            <canvas id="canvas" style="display:none;"></canvas>
+        </div>
+        <div class="result-section">
+            <h2>Результат</h2>
+            <div id="result">Ожидание обработки...</div>
+            <div id="imageResult"></div>
+        </div>
+        <div class="history-section">
+            <h2>История запросов</h2>
+            <button id="refreshHistoryBtn">Обновить историю</button>
+            <button id="reportPdfBtn">Скачать отчёт PDF</button>
+            <button id="reportExcelBtn">Скачать отчёт Excel</button>
+            <div id="historyList"></div>
+        </div>
+    </div>
+    <script src="/static/script.js"></script>
+</body>
+</html>
